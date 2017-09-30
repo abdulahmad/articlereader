@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import scrollToComponent from 'react-scroll-to-component';
 import Author from '../Author/Author';
 import Content from '../Content/Content';
 import CaptionedImage from '../CaptionedImage/CaptionedImage';
@@ -26,6 +27,11 @@ class Page extends React.Component {
       this.setState({
         currentPage: newPage
       });
+      scrollToComponent(this.anchor, {
+        offset: 0,
+        align: 'top',
+        duration: 1500
+      });
       return newPage;
     }
     return this.state.currentPage; // don't change pages if there is no valid previous page
@@ -36,6 +42,11 @@ class Page extends React.Component {
     if (newPage <= Object.keys(this.props.data.Pages).length) { // ensure there is a valid next page
       this.setState({
         currentPage: newPage
+      });
+      scrollToComponent(this.anchor, {
+        offset: 0,
+        align: 'top',
+        duration: 1500
       });
       return newPage;
     }
@@ -52,7 +63,7 @@ class Page extends React.Component {
           captionLink={this.props.data.MainImageAttributions[0].SourceUrl}
         />
         <Author authorBio={this.props.data.OriginalAuthor} />
-        <Content pageContent={this.props.data.Pages[this.state.currentPage]} />
+        <Content pageContent={this.props.data.Pages[this.state.currentPage]} ref={(c) => { this.anchor = c; }} />
         <Pagination currentPage={this.state.currentPage} previousPage={this.previousPage} nextPage={this.nextPage} />
       </div>
     );

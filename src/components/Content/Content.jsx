@@ -8,6 +8,7 @@ const Content = ({ pageContent }) => {
   const contentObj = [];
 
   pageContent.forEach((contentSlot) => {
+    console.log(contentSlot.ComponentId);
     if (contentSlot.Type === 'TextBlock') {
       contentObj.push(<ContentTextBlock content={contentSlot} />);
     } else if (contentSlot.Type === 'Image') {
@@ -17,8 +18,8 @@ const Content = ({ pageContent }) => {
     }
   });
 
-  const listItems = contentObj.map(contentSlot =>
-    <div>{contentSlot}</div>
+  const listItems = contentObj.map(contentElement =>
+    <div key={contentElement.props.content.ComponentId}>{contentElement}</div>
   );
   return listItems;
 };
