@@ -14,6 +14,10 @@ I added ESLint just to help keep the code looking clean as I built it. I also ad
 
 If I were to spend more time on this I'd abstract importing the Article data into an API Mock service, rather than importing the JSON directly. And add CSS Bem Linting to enforce CSS being styled per component with consistent naming conventions.
 
+## Note about yarn
+
+You should be able to use yarn interchangeably with npm to follow the instructions in the rest of this document.
+
 ## Installation Instructions
 
 1. Install Node from http://nodejs.org
@@ -23,6 +27,18 @@ If I were to spend more time on this I'd abstract importing the Article data int
 ## Running Development Server
 
 Run ```npm start``` to run the development server and see the code running in your browser.
+
+You can access the article reader at http://localhost:3000
+
+## Installing & Running Storybook
+
+Storybook is an environment that allows you to develop UI components in isolation from the rest of the application.
+
+To Install: ```npm i -g @storybook/cli```
+
+To Run: ```npm run storybook```
+
+You can access storybook at http://localhost:6006
 
 ## IDE Setup
 
