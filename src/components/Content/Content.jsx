@@ -8,7 +8,6 @@ const Content = ({ pageContent }) => {
   const contentObj = [];
 
   pageContent.forEach((contentSlot) => {
-    console.log(contentSlot.ComponentId);
     if (contentSlot.Type === 'TextBlock') {
       contentObj.push(<ContentTextBlock content={contentSlot} />);
     } else if (contentSlot.Type === 'Image') {
@@ -27,5 +26,5 @@ const Content = ({ pageContent }) => {
 export default Content;
 
 Content.propTypes = {
-  pageContent: PropTypes.object.isRequired,
+  pageContent: PropTypes.array.isRequired,
 };
