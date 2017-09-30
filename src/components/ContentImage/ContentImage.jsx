@@ -8,8 +8,8 @@ const ContentImage = ({ content }) => (
     title={content.StrippedTitle}
     imageUrl={content.Url}
     alt=""
-    caption={`Source: ${content.Attributions.SourceName}`}
-    captionLink={content.Attributions.SourceUrl}
+    caption={`Source: ${content.Attributions[0].SourceName}`}
+    captionLink={content.Attributions[0].SourceUrl}
   />
 );
 
