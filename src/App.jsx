@@ -12,7 +12,8 @@ class App extends Component {
           title={data.Title}
           metaDescription={data.Excerpt}
           metaImage={data.MainImageUrl}
-          metaUrl="" />
+          metaUrl=""
+        />
         <Page data={data} />
       </div>
     );

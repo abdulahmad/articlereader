@@ -1,0 +1,58 @@
+{
+	"parser": "babel-eslint",
+	"extends": ["prettier", "airbnb", "plugin:jsx-a11y/recommended"],
+	"plugins": ["prettier", "flowtype", "react", "jsx-a11y"],
+	"parserOptions": {
+		"ecmaVersion": 2016,
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"jsx": true
+		}
+	},
+	"env": {
+		"es6": true,
+		"browser": true,
+		"node": true,
+		"commonjs": true
+	},
+	"globals": {
+		"test": true,
+    "describe": true,
+		"expect": true
+	},
+	"rules": {
+    "comma-dangle": "off",
+		"constructor-super": "error",
+		"func-names": "off",
+		"import/no-dynamic-require": "off",
+		"indent": ["error", 2],
+		"linebreak-style": 0,
+		"max-len": "off",
+		"no-console": "off",
+		"no-const-assign": "error",
+		"no-lonely-if": "error",
+		"no-mixed-spaces-and-tabs": "error",
+		"no-this-before-super": "error",
+		"no-undef": "error",
+		"no-unreachable": "error",
+		"no-unused-vars": "error",
+		"prettier/prettier": 0,
+		"prettier/singleQuote": 0,
+    "react/forbid-prop-types": 0,
+		"react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+		"react/jsx-uses-react": "error",
+		"react/jsx-uses-vars": "error",
+		"react/jsx-wrap-multilines": "off",
+		"react/prefer-stateless-function": [0, "off"],
+		"space-before-function-paren": "off",
+		"valid-typeof": "error"
+	},
+	"settings": {
+		"react": {
+			"createClass": "createReactClass",
+			"pragma": "React",
+			"version": "16.0"
+		},
+		"propWrapperFunctions": ["forbidExtraProps"]
+	}
+}

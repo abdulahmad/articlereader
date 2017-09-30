@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 class Pagination extends React.Component {
-
   static propTypes = {
     currentPage: PropTypes.number.isRequired,
     previousPage: PropTypes.func.isRequired,
@@ -12,9 +11,9 @@ class Pagination extends React.Component {
   render() {
     return (
       <div>
-        <div onClick={this.props.previousPage()}>&lt;</div>
+        <button onClick={this.props.previousPage()}>&lt;</button>
         {this.props.currentPage}
-        <div onClick={this.props.nextPage()}>&gt;</div>
+        <button onClick={this.props.nextPage()}>&gt;</button>
       </div>
     );
   }

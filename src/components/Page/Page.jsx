@@ -1,10 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Content from '../Content/Content';
 import Pagination from '../Pagination/Pagination';
-import PropTypes from 'prop-types';
 
 class Page extends React.Component {
-
   static propTypes = {
     data: PropTypes.object.isRequired
   }
@@ -14,19 +13,21 @@ class Page extends React.Component {
     this.state = {
       currentPage: 1
     };
+    this.previousPage = this.previousPage.bind(this);
+    this.nextPage = this.nextPage.bind(this);
   }
 
   previousPage() {
-    let newPage = this.state.currentPage--;
-    if(newPage > 0) { // ensure there is a valid previous page
-      return newPage; 
+    const newPage = this.state.currentPage - 1;
+    if (newPage > 0) { // ensure there is a valid previous page
+      return newPage;
     }
     return this.state.currentPage; // don't change pages if there is no valid previous page
   }
 
   nextPage() {
-    let newPage = this.state.currentPage++;
-    if(newPage <= Object.keys(this.props.data.Pages).length) { // ensure there is a valid next page
+    const newPage = this.state.currentPage + 1;
+    if (newPage <= Object.keys(this.props.data.Pages).length) { // ensure there is a valid next page
       return newPage;
     }
     return this.state.currentPage; // don't change pages if there is no valid next page
@@ -36,7 +37,7 @@ class Page extends React.Component {
     return (
       <div>
         <Content pageContent={this.props.data.Pages[this.state.currentPage]} />
-        <Pagination currentPage={this.state.currentPage} />
+        <Pagination currentPage={this.state.currentPage} previousPage={this.previousPage} nextPage={this.nextPage} />
       </div>
     );
   }

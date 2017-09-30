@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 
 const Content = ({ pageContent }) => {
   console.log(pageContent);
-  const contentObj = [];
+  // const contentObj = [];
   // for (const contentSlot in pageContent) {
   //   if (contentSlot.Type === 'TextBlock') {
   //     contentObj.push(<ContentTextBlock content={contentSlot} />);
@@ -16,10 +16,11 @@ const Content = ({ pageContent }) => {
   //     contentObj.push(<ContentAd content={contentSlot} />);
   //   }
   // }
-  const contentList = contentObj.map(contentSlot =>
-    <div>{contentSlot}</div>,
-  );
-  return ({ contentList });
+  // const contentList = contentObj.map(contentSlot =>
+  //   <div>{contentSlot}</div>,
+  // );
+  // return ({ contentList });
+  return <div />;
 };
 
 export default Content;
