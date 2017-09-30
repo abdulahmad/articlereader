@@ -1,7 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Author from '../Author/Author';
 import Content from '../Content/Content';
+import CaptionedImage from '../CaptionedImage/CaptionedImage';
 import Pagination from '../Pagination/Pagination';
+import Title from '../Title/Title';
 
 class Page extends React.Component {
   static propTypes = {
@@ -42,6 +45,13 @@ class Page extends React.Component {
   render() {
     return (
       <div>
+        <Title title={this.props.data.Title} />
+        <CaptionedImage
+          imageUrl={this.props.data.MainImageUrl}
+          caption={this.props.data.MainImageAttributions.SourceName}
+          captionLink={this.props.data.MainImageAttributions.SourceUrl}
+        />
+        <Author authorBio={this.props.data.OriginalAuthor} />
         <Content pageContent={this.props.data.Pages[this.state.currentPage]} />
         <Pagination currentPage={this.state.currentPage} previousPage={this.previousPage} nextPage={this.nextPage} />
       </div>
