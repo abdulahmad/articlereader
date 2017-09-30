@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {Helmet} from "react-helmet";
 
 const HtmlHead = ({ title, metaDescription, metaImage, metaUrl }) => (
-  <head>
+  <Helmet>
     <title>{title}</title>
 
     <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
@@ -15,7 +16,7 @@ const HtmlHead = ({ title, metaDescription, metaImage, metaUrl }) => (
     <meta property="og:image" content={metaImage} />
     <meta property="og:description" content={metaDescription} />
 
-  </head>
+  </Helmet>
 );
 
 export default HtmlHead;

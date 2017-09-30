@@ -12,11 +12,13 @@ I bootstrapped with Create React App just to get going quickly-- that being said
 
 I added ESLint just to help keep the code looking clean as I built it. I also added SCSS support with sass-loader.
 
-If I were to spend more time on this I'd abstract importing the Article data into an API Mock service, rather than importing the JSON directly. And add CSS Bem Linting to enforce CSS being styled per component with consistent naming conventions.
+If I were to spend more time on this I'd abstract importing the Article data into an API Mock service, rather than importing the JSON directly. And add CSS BEM Linting to enforce CSS being styled per component with consistent naming conventions.
+
+I didn't include a CSS framework because in the modern era of flexbox and CSS Grid it's not really necessary. There are some compromises that have to be made due to CSS Grid still being fairly new and a few browsers that are still in use don't fully support it, but in that case the goal would be to serve up the mobile version of the website.
 
 ## Note about yarn
 
-You should be able to use yarn interchangeably with npm to follow the instructions in the rest of this document.
+You should be able to use ```yarn``` interchangeably with ```npm``` to follow the instructions in the rest of this document.
 
 ## Installation Instructions
 

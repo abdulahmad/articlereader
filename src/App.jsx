@@ -1,21 +1,20 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.scss';
+import HtmlHead from './components/HtmlHead/HtmlHead';
+import Page from './components/Page/Page';
+import data from './data/fun-adam-sandler-facts.json';
 
 class App extends Component {
   render() {
     return (
-      <body>
-        <div className="App">
-          <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <h1 className="App-title">Welcome to React</h1>
-          </header>
-          <p className="App-intro">
-            To get started, edit <code>src/App.js</code> and save to reload.
-          </p>
-        </div>
-      </body>
+      <div className="App">
+        <HtmlHead
+          title={data.Title}
+          metaDescription={data.Excerpt}
+          metaImage={data.MainImageUrl}
+          metaUrl="" />
+        <Page data={data} />
+      </div>
     );
   }
 }
