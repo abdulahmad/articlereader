@@ -20,6 +20,9 @@ class Page extends React.Component {
   previousPage() {
     const newPage = this.state.currentPage - 1;
     if (newPage > 0) { // ensure there is a valid previous page
+      this.setState({
+        currentPage: newPage
+      });
       return newPage;
     }
     return this.state.currentPage; // don't change pages if there is no valid previous page
@@ -28,6 +31,9 @@ class Page extends React.Component {
   nextPage() {
     const newPage = this.state.currentPage + 1;
     if (newPage <= Object.keys(this.props.data.Pages).length) { // ensure there is a valid next page
+      this.setState({
+        currentPage: newPage
+      });
       return newPage;
     }
     return this.state.currentPage; // don't change pages if there is no valid next page
