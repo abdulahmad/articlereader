@@ -18,11 +18,11 @@ If I were to spend more time on this I'd abstract importing the Article data int
 
 1. Install Node from http://nodejs.org
 2. Clone this repository
-2. Run 'npm i' in the cloned repository folder
+2. Run ```npm i``` in the cloned repository folder
 
 ## Running Development Server
 
-Run 'npm start' to run the development server and see the code running in your browser.
+Run ```npm start``` to run the development server and see the code running in your browser.
 
 ## IDE Setup
 
@@ -31,12 +31,12 @@ I used Atom (http://atom.io) to build this. You can use whatever IDE you'd like,
 1. language-javascript-jsx
 2. linter-estlint. In the settings enable 'Fix Errors on Save'
 
-You also need to run 'npm i' on the repository for linting to work correctly if you haven't yet.
+You also need to run ```npm i``` on the repository for linting to work correctly if you haven't yet.
 
 ## Building Code
 
-Run 'npm build' to build the JS and CSS bundles into the dist folder.
+Run ```npm build``` to build the JS and CSS bundles into the dist folder.
 
 ## Testing
 
-Run 'npm test' to run test cases and show test coverage.
+Run ```npm test``` to run test cases and show test coverage.
