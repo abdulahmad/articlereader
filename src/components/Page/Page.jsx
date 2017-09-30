@@ -23,30 +23,23 @@ class Page extends React.Component {
 
   previousPage() {
     const newPage = this.state.currentPage - 1;
-    if (newPage > 0) { // ensure there is a valid previous page
-      this.setState({
-        currentPage: newPage
-      });
-      scrollToComponent(this.anchor, {
-        offset: 0,
-        align: 'top',
-        duration: 1500
-      });
-      return newPage;
-    }
-    return this.state.currentPage; // don't change pages if there is no valid previous page
+    this.changePage(newPage);
   }
 
   nextPage() {
     const newPage = this.state.currentPage + 1;
-    if (newPage <= Object.keys(this.props.data.Pages).length) { // ensure there is a valid next page
+    this.changePage(newPage);
+  }
+
+  changePage(newPage) {
+    if (newPage <= Object.keys(this.props.data.Pages).length && newPage > 0) { // ensure there is a valid next page
       this.setState({
         currentPage: newPage
       });
       scrollToComponent(this.anchor, {
         offset: 0,
         align: 'top',
-        duration: 1500
+        duration: 700
       });
       return newPage;
     }
@@ -63,7 +56,8 @@ class Page extends React.Component {
           captionLink={this.props.data.MainImageAttributions[0].SourceUrl}
         />
         <Author authorBio={this.props.data.OriginalAuthor} />
-        <Content pageContent={this.props.data.Pages[this.state.currentPage]} ref={(c) => { this.anchor = c; }} />
+        <div ref={(c) => { this.anchor = c; }} />
+        <Content pageContent={this.props.data.Pages[this.state.currentPage]} />
         <Pagination currentPage={this.state.currentPage} previousPage={this.previousPage} nextPage={this.nextPage} />
       </div>
     );
