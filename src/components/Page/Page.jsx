@@ -48,8 +48,8 @@ class Page extends React.Component {
         <Title title={this.props.data.Title} />
         <CaptionedImage
           imageUrl={this.props.data.MainImageUrl}
-          caption={this.props.data.MainImageAttributions.SourceName}
-          captionLink={this.props.data.MainImageAttributions.SourceUrl}
+          caption={this.props.data.MainImageAttributions[0].SourceName}
+          captionLink={this.props.data.MainImageAttributions[0].SourceUrl}
         />
         <Author authorBio={this.props.data.OriginalAuthor} />
         <Content pageContent={this.props.data.Pages[this.state.currentPage]} />
