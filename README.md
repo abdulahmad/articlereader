@@ -4,17 +4,23 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 This project is an article reader created in React.
 
-## Development method
+## Development Notes
 
 I chose to build it as I would if this were a real piece of code I was building for a production system. I intentionally broke down the Article Reader into as small components as I could.
 
-I bootstrapped with Create React App just to get going quickly-- that being said, I'd probably do a heavier reworking of the webpack configuration and packages.json to make sure the project didn't have things configured that weren't necessary. Or I'd just install the node modules and build the configurations from scratch.
-
 I added ESLint just to help keep the code looking clean as I built it. I also added SCSS support with sass-loader.
+
+I didn't include a CSS framework because in the modern era of flexbox and CSS Grid it's not really necessary. There are some compromises that have to be made due to CSS Grid still being fairly new and a few browsers that are still in use don't fully support it, but in that case the goal would be to serve up the mobile version of the website. Also, this site was very simple and didn't require any changing of the way the page displayed between mobile and desktop.
 
 If I were to spend more time on this I'd abstract importing the Article data into an API Mock service, rather than importing the JSON directly. And add CSS BEM Linting to enforce CSS being styled per component with consistent naming conventions.
 
-I didn't include a CSS framework because in the modern era of flexbox and CSS Grid it's not really necessary. There are some compromises that have to be made due to CSS Grid still being fairly new and a few browsers that are still in use don't fully support it, but in that case the goal would be to serve up the mobile version of the website.
+I bootstrapped with Create React App just to get going quickly-- that being said, I'd probably do a heavier reworking of the webpack configuration and packages.json to make sure the project didn't have things configured that weren't necessary. Or I'd just install the node modules and build the configurations from scratch. There probably is some bloat to the bundle size because I didn't optimize these aspects.
+
+The progress bar was built the way I would do it if I was asked to do it at a real job-- with an npm package that can already do the task. I may have been a bit more careful in checking that the package I included was as lean as possible though. You should be able to see the progress bar in Storybook (look below for instructions to run storybook). That being said I think there are better progress bars out there, but just in a pinch picked the first one that I could easily get working.
+
+I took the balance of Saturday to build this project out. If I had more time (and I don't-- busy on Sunday) I would make sure the test cases were working and do clean up and ensure the bundle is as small as possible.
+
+Commenting in the code is light-- partially because of time constraints, but also because many of the components are pretty light and simple to look at and understand how they work.
 
 ## Note about yarn
 
@@ -58,3 +64,5 @@ Run ```npm build``` to build the JS and CSS bundles into the dist folder.
 ## Testing
 
 Run ```npm test``` to run test cases and show test coverage.
+
+NOTE: Test Cases have not been worked on and the default one fails because there are some UI specific packages that have to be conditionally disabled if running in test mode. I can do this, but it would take more than I have this weekend :)

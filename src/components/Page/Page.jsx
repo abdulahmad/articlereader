@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import scrollToComponent from 'react-scroll-to-component';
+// import scrollToComponent from 'react-scroll-to-component';
 import Author from '../Author/Author';
 import Content from '../Content/Content';
 import CaptionedImage from '../CaptionedImage/CaptionedImage';
@@ -33,6 +33,7 @@ class Page extends React.Component {
   }
 
   changePage(newPage) {
+    const scrollToComponent = require('react-scroll-to-component'); // eslint-disable-line global-require
     if (newPage <= Object.keys(this.props.data.Pages).length && newPage > 0) { // ensure there is a valid next page
       this.setState({
         currentPage: newPage
