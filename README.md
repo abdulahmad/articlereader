@@ -8,6 +8,8 @@ This project is an article reader created in React.
 
 I chose to build it as I would if this were a real piece of code I was building for a production system. I intentionally broke down the Article Reader into as small components as I could.
 
+As mentioned I bootstrapped it with ```create-react-app```. Everything from ```src/App.jsx``` and below is not boilerplate and pretty much 100% my code. This includes everything in ```src/components```.
+
 I added ESLint just to help keep the code looking clean as I built it. I also added SCSS support with sass-loader.
 
 I didn't include a CSS framework because in the modern era of flexbox and CSS Grid it's not really necessary. There are some compromises that have to be made due to CSS Grid still being fairly new and a few browsers that are still in use don't fully support it, but in that case the goal would be to serve up the mobile version of the website. Also, this site was very simple and didn't require any changing of the way the page displayed between mobile and desktop.
@@ -24,9 +26,11 @@ I took the balance of Saturday to build this project out. If I had more time (an
 
 Commenting in the code is light-- partially because of time constraints, but also because many of the components are pretty light and simple to look at and understand how they work.
 
-I normally wouldn't do this, but for the purposes of this project I forced ```http://``` into the URLs so that I could also distribute a version of this that runs locally on your hard drive without having to start a webserver. This was in case you would like to run this without going through all of the steps to set up node and the repository on your machine. You should be able to open ```build/index.html``` from the cloned repo in your browser directly and see this application working (I had to make a slight path modification-- if you run the build script, index.html will not work directly in the browser anymore). But I'd highly recommend both using the dev server version and looking at the components in Storybook.
-
 I will also note that I'm not usually doing design like I did for this project-- it's something I might have had to do in a pinch here and there in some previous roles, but I'm usually basing my work on mocks from actual designers and making sure I nail the design to a T. Or even if there aren't mocks for a specific feature, there's enough of a look & feel to the site that I can extrapolate. But I do feel that technically, the structure of the code is very sound, and it would be pretty easy for someone who hasn't looked at this code base to understand and make their own changes to it.
+
+## Note on hardcoded protocol
+
+I normally wouldn't do this, but for the purposes of this project I forced ```http://``` into the URLs so that I could also distribute a version of this that runs locally on your hard drive without having to start a webserver. This was in case you would like to run this without going through all of the steps to set up node and the repository on your machine. You should be able to open ```build/index.html``` from the cloned repo in your browser directly and see this application working (I had to make a slight path modification-- if you run the build script, index.html will not work directly in the browser anymore). But I'd highly recommend both using the dev server version and looking at the components in Storybook.
 
 ## Note about yarn
 
