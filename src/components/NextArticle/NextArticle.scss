@@ -1,0 +1,18 @@
+.NextArticle__button {
+  font-size:20px;
+  background: black;
+  color: white;
+  transition: all 0.5s;
+  // font-family: sans-serif;
+  padding:20px;
+  text-transform: uppercase;
+  width:100%;
+  text-align: center;
+  display: block;
+  margin-bottom: 30px;
+  &:hover {
+    cursor: pointer;
+    background:#777;
+    transition: all 0.5s;
+  }
+}

@@ -49,7 +49,7 @@ class Page extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="Page">
         <Title title={this.props.data.Title} />
         <CaptionedImage
           imageUrl={this.props.data.MainImageUrl}

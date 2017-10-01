@@ -1,0 +1,26 @@
+.Pagination {
+  width:100%;
+  text-align:center;
+  margin: 40px 0;
+}
+
+.Pagination__button {
+  font-size:50px;
+  background: black;
+  color: white;
+  border:none;
+  transition: all 0.5s;
+  padding: 5px 30px;
+
+  &:hover {
+    cursor: pointer;
+    background:#777;
+    transition: all 0.5s;
+  }
+}
+
+.Pagination__page {
+  font-size: 50px;
+  margin: 0 20px;
+  font-family: serif
+}

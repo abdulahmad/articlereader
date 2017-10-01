@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './Pagination.scss';
 
 class Pagination extends React.Component {
   static propTypes = {
@@ -10,10 +11,10 @@ class Pagination extends React.Component {
 
   render() {
     return (
-      <div>
-        <button onClick={this.props.previousPage}>&lt;</button>
-        {this.props.currentPage}
-        <button onClick={this.props.nextPage}>&gt;</button>
+      <div className="Pagination">
+        <button className="Pagination__button" onClick={this.props.previousPage}>&lt;</button>
+        <span className="Pagination__page">{this.props.currentPage}</span>
+        <button className="Pagination__button" onClick={this.props.nextPage}>&gt;</button>
       </div>
     );
   }

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Author from '../Author/Author';
 import CaptionedImage from '../CaptionedImage/CaptionedImage';
 import Title from '../Title/Title';
+import './NextArticle.scss';
 
 class Page extends React.Component {
   static propTypes = {
