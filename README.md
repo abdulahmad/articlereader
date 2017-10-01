@@ -107,7 +107,7 @@ NOTE: Test Cases have not been worked on and the default one fails because there
 
 ```ContntVideoEmbed``` - Content slot for Video Embed
 
-```HtmlHead``` - Sets the headers for the page
+```HtmlHead``` - Sets the headers for the page. This is where the meta tags for social media sharing are set
 
 ```NextArticle``` - Displays information for the Next Article
 
