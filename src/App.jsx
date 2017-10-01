@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import './App.scss';
 import HtmlHead from './components/HtmlHead/HtmlHead';
 import Page from './components/Page/Page';
-import data from './data/fun-adam-sandler-facts.json';
+// import data from './data/fun-adam-sandler-facts.json';
+import data from './data/changing-rooms-test.json';
 
 class App extends Component {
   render() {

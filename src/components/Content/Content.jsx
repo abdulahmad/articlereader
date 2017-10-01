@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import ContentTextBlock from '../ContentTextBlock/ContentTextBlock';
 import ContentImage from '../ContentImage/ContentImage';
 import ContentAd from '../ContentAd/ContentAd';
+import ContentVideoEmbed from '../ContentVideoEmbed/ContentVideoEmbed';
 
 const Content = ({ pageContent }) => {
   const contentObj = [];
@@ -14,6 +15,8 @@ const Content = ({ pageContent }) => {
       contentObj.push(<ContentImage content={contentSlot} />);
     } else if (contentSlot.Type === 'Ad Placeholder') {
       contentObj.push(<ContentAd content={contentSlot} />);
+    } else if (contentSlot.Type === 'VideoEmbed') {
+      contentObj.push(<ContentVideoEmbed content={contentSlot} />);
     }
   });
 
