@@ -12,6 +12,7 @@ import ContentVideoEmbed from '../src/components/ContentVideoEmbed/ContentVideoE
 import NextArticle from '../src/components/NextArticle/NextArticle';
 import Page from '../src/components/Page/Page';
 import Pagination from '../src/components/Pagination/Pagination';
+import ProgressBar from '../src/components/ProgressBar/ProgressBar';
 import Title from '../src/components/Title/Title';
 
 import data from '../src/data/fun-adam-sandler-facts.json';
@@ -36,8 +37,9 @@ storiesOf('Article', module)
   .add('Page', () => <Page data={data} />)
   .add('Pagination', () =>
     <Pagination
-      currentPage="2"
+      currentPage={2}
       previousPage={action('previousPage')}
       nextPage={action('nextPage')}
     />)
+  .add('ProgressBar', () => <ProgressBar />)
   .add('Title', () => <Title title={data.Title} />);
