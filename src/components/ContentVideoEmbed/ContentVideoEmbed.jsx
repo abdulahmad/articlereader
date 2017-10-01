@@ -15,7 +15,7 @@ const ContentVideoEmbed = ({ content }) => {
     <div className="ContentVideoEmbed">
       <VisibilitySensor onChange={onChange}>
         {/* eslint-disable jsx-a11y/media-has-caption */}
-        <video id={`vid_${content.ComponentId}`} src={`http:${content.Properties.mp4_url}`} controls>
+        <video className="ContentVideoEmbed__video" id={`vid_${content.ComponentId}`} src={`http:${content.Properties.mp4_url}`} controls>
           <p>Your browser doesn&amp;t support HTML5 video. Here is a <a href={content.Properties.mp4_url}>link to the video</a> instead.</p>
         </video>
         {/* eslint-enable jsx-a11y/media-has-caption */}
