@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import HtmlHead from './components/HtmlHead/HtmlHead';
 import Page from './components/Page/Page';
+
+// Data Sets -- see Documentation Notes in README.md for details
 // import data from './data/fun-adam-sandler-facts.json';
 import data from './data/changing-rooms-test.json';
 
