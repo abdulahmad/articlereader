@@ -9,7 +9,6 @@ import ContentAd from '../src/components/ContentAd/ContentAd';
 import ContentImage from '../src/components/ContentImage/ContentImage';
 import ContentTextBlock from '../src/components/ContentTextBlock/ContentTextBlock';
 import ContentVideoEmbed from '../src/components/ContentVideoEmbed/ContentVideoEmbed';
-import HtmlHead from '../src/components/HtmlHead/HtmlHead';
 import NextArticle from '../src/components/NextArticle/NextArticle';
 import Page from '../src/components/Page/Page';
 import Pagination from '../src/components/Pagination/Pagination';

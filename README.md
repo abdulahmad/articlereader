@@ -72,3 +72,31 @@ Run ```npm run build``` to build the JS and CSS bundles into the build folder.
 Run ```npm test``` to run test cases and show test coverage.
 
 NOTE: Test Cases have not been worked on and the default one fails because there are some UI specific packages that have to be conditionally disabled if running in test mode. I can do this, but it would take more than I have this weekend :)
+
+## Code Structure
+
+Important Files & folders:
+
+```build``` - where the production build gets outputted
+```config``` - webpack, jest and env config
+```src``` - code for article reader lives here
+```src\components``` - code for every component within article reader
+```src\data``` - mock data from API calls
+```src\App.jsx``` - top level component
+```stories``` - where storybook stories are defined
+
+Component Descriptions:
+
+```Author``` - Displays author name
+```CaptionedImage``` - Displays a captioned image
+```Content``` - Takes in a content slot from the page and then renders the appropriate content component
+```ContntAd``` - Content slot for Ad Placeholder
+```ContntImage``` - Content slot for Image
+```ContentTextBlock``` - Content slot for Text Block
+```ContntVideoEmbed``` - Content slot for Video Embed
+```HtmlHead``` - Sets the headers for the page
+```NextArticle``` - Displays information for the Next Article
+```Page``` - Main Layout and Global state for the article reader
+```Pagination``` - Displays and can change current page
+```ProgressBar``` - Progress Bar (unused in article but can be seen in storybook)
+```Title``` - H1 Title for article
