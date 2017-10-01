@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './Author.scss';
 
 const Author = ({ authorBio }) => (
-  <div className="Author">By {authorBio.Name}</div>
+  <div className="Author">By {authorBio.Name ? authorBio.Name : authorBio.UserName}</div>
 );
 
 export default Author;

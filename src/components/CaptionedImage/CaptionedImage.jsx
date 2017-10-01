@@ -4,9 +4,11 @@ import './CaptionedImage.scss';
 
 const CaptionedImage = ({ title, imageUrl, caption, captionLink, alt }) => (
   <div className="CaptionedImage">
-    <h2 className="CaptionedIMage__title">{title}</h2>
-    <img className="CaptionedImage__img" src={imageUrl} alt={alt} />
-    <span className="CaptionedImage__caption"><a href={captionLink}>{caption}</a></span>
+    <a href={captionLink} target="_blank">
+      <h2 className="CaptionedImage__title">{title}</h2>
+      <img className="CaptionedImage__img" src={imageUrl} alt={alt} />
+      <span className="CaptionedImage__caption">{caption}</span>
+    </a>
   </div>
 );
 

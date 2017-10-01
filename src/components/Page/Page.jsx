@@ -6,6 +6,7 @@ import Content from '../Content/Content';
 import CaptionedImage from '../CaptionedImage/CaptionedImage';
 import Pagination from '../Pagination/Pagination';
 import Title from '../Title/Title';
+import NextArticle from '../NextArticle/NextArticle';
 
 class Page extends React.Component {
   static propTypes = {
@@ -59,6 +60,7 @@ class Page extends React.Component {
         <div ref={(c) => { this.anchor = c; }} />
         <Content pageContent={this.props.data.Pages[this.state.currentPage]} />
         <Pagination currentPage={this.state.currentPage} previousPage={this.previousPage} nextPage={this.nextPage} />
+        <NextArticle data={this.props.data.NextArticle} />
       </div>
     );
   }

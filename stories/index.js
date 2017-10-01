@@ -9,6 +9,7 @@ import ContentAd from '../src/components/ContentAd/ContentAd';
 import ContentImage from '../src/components/ContentImage/ContentImage';
 import ContentTextBlock from '../src/components/ContentTextBlock/ContentTextBlock';
 import ContentVideoEmbed from '../src/components/ContentVideoEmbed/ContentVideoEmbed';
+import NextArticle from '../src/components/NextArticle/NextArticle';
 import Page from '../src/components/Page/Page';
 import Pagination from '../src/components/Pagination/Pagination';
 import Title from '../src/components/Title/Title';
@@ -31,6 +32,7 @@ storiesOf('Article', module)
   .add('ContentImage', () => <ContentImage content={data.Pages['1'][1]} />)
   .add('ContentTextBlock', () => <ContentTextBlock content={data.Pages['1'][0]} />)
   .add('ContentVideoEmbed', () => <ContentVideoEmbed content={videoData.Pages['1'][8]} />)
+  .add('NextArticle', () => <NextArticle data={data.NextArticle} />)
   .add('Page', () => <Page data={data} />)
   .add('Pagination', () =>
     <Pagination
