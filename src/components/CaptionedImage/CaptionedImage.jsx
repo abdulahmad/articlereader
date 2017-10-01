@@ -7,7 +7,7 @@ const CaptionedImage = ({ title, imageUrl, caption, captionLink, alt }) => (
     <a href={captionLink} target="_blank">
       <h2 className="CaptionedImage__title">{title}</h2>
       <div className="CaptionedImage_imgWrap">
-        <img className="CaptionedImage__img" src={imageUrl} alt={alt} />
+        <img className="CaptionedImage__img" src={`http:${imageUrl}`} alt={alt} />
       </div>
       <div className="CaptionedImage__caption">{caption}</div>
     </a>
