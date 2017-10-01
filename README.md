@@ -24,7 +24,7 @@ I took the balance of Saturday to build this project out. If I had more time (an
 
 Commenting in the code is light-- partially because of time constraints, but also because many of the components are pretty light and simple to look at and understand how they work.
 
-I forced ```http://``` into the URLs so that I could also distribute a version of this that runs locally on your hard drive without having to start a webserver. This was in case you would like to run this without going through all of the steps to set up node and the repository on your machine.
+I forced ```http://``` into the URLs so that I could also distribute a version of this that runs locally on your hard drive without having to start a webserver. This was in case you would like to run this without going through all of the steps to set up node and the repository on your machine. You should be able to open ```build/index.html``` from the cloned repo in your browser directly and see this application working (I had to make a slight path modification-- if you run the build script, index.html will not work directly in the browser anymore). But I'd highly recommend both using the dev server version and looking at the components in Storybook.
 
 ## Note about yarn
 
