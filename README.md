@@ -75,7 +75,7 @@ NOTE: Test Cases have not been worked on and the default one fails because there
 
 ## Code Structure
 
-Important Files & folders:
+### Important Files & folders:
 
 ```build``` - where the production build gets outputted
 
@@ -91,7 +91,7 @@ Important Files & folders:
 
 ```stories``` - where storybook stories are defined
 
-Component Descriptions:
+### Component Descriptions:
 
 ```Author``` - Displays author name
 
