@@ -14,7 +14,7 @@ I added ESLint just to help keep the code looking clean as I built it. I also ad
 
 I didn't include a CSS framework because in the modern era of flexbox and CSS Grid it's not really necessary. There are some compromises that have to be made due to CSS Grid still being fairly new and a few browsers that are still in use don't fully support it, but in that case the goal would be to serve up the mobile version of the website. Also, this site was very simple and didn't require any changing of the way the page displayed between mobile and desktop.
 
-If you want to flip between the Adam Sandler article and the Changing Rooms article, go into src/App.jsx and you should be able to flip between the two data sets near the top of the file by commenting out one line and uncommenting the other line.
+If you want to flip between the Adam Sandler article and the Changing Rooms article, go into ```src/App.jsx``` and you should be able to flip between the two data sets near the top of the file by commenting out one line and uncommenting the other line.
 
 If I were to spend more time on this I'd abstract importing the Article data into an API Mock service, rather than importing the JSON directly. And add CSS BEM Linting to enforce CSS being styled per component with consistent naming conventions. I'd also create some sort of global SCSS structure for common variables (breakpoints, etc) and theming.
 
