@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './Title.scss';
 
 const Title = ({ title }) => (
-  <h1>{title}</h1>
+  <h1 className="Title">{title}</h1>
 );
 
 export default Title;

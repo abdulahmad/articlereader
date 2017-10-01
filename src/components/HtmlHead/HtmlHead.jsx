@@ -16,6 +16,8 @@ const HtmlHead = ({ title, metaDescription, metaImage, metaUrl }) => (
     <meta property="og:image" content={metaImage} />
     <meta property="og:description" content={metaDescription} />
 
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet" />
+
   </Helmet>
 );
 
