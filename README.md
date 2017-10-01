@@ -26,6 +26,8 @@ Commenting in the code is light-- partially because of time constraints, but als
 
 I forced ```http://``` into the URLs so that I could also distribute a version of this that runs locally on your hard drive without having to start a webserver. This was in case you would like to run this without going through all of the steps to set up node and the repository on your machine. You should be able to open ```build/index.html``` from the cloned repo in your browser directly and see this application working (I had to make a slight path modification-- if you run the build script, index.html will not work directly in the browser anymore). But I'd highly recommend both using the dev server version and looking at the components in Storybook.
 
+I will also note that I'm not usually doing design like I did for this project-- it's something I might have had to do in a pinch here and there in some previous roles, but I'm usually basing my work on mocks from actual designers and making sure I nail the design to a T. Or even if there aren't mocks for a specific feature, there's enough of a look & feel to the site that I can extrapolate. But I do feel that technically, the structure of the code is very sound, and it would be pretty easy for someone who hasn't looked at this code base to understand and make their own changes to it.
+
 ## Note about yarn
 
 You should be able to use ```yarn``` interchangeably with ```npm``` to follow the instructions in the rest of this document.
